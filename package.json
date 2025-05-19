@@ -1,0 +1,23 @@
+{
+	"name": "tournoi-roundrobin",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"prestart": "tsc",
+		"start": "ts-node src/index.ts"
+	},
+	"dependencies": {
+		"csv-writer": "^1.6.0",
+		"duckdb": "^1.2.1",
+		"fast-csv": "^5.0.2",
+		"xlsx": "^0.18.5"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.18",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.3.3"
+	},
+	"volta": {
+		"node": "22.15.0"
+	}
+}
