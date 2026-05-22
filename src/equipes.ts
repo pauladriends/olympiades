@@ -20,7 +20,7 @@ export class Equipe {
 		this.adultes = +row.adultes;
 		this.ageEnfant1 = +row.ageEnfant1;
 		if (row.ageEnfant2) this.ageEnfant2 = +row.ageEnfant2;
-		if (row.ageEnfant3) this.ageEnfant2 = +row.ageEnfant3;
+		if (row.ageEnfant3) this.ageEnfant3 = +row.ageEnfant3;
 		this.ageMoyen = +(row.ageMoyen.replace(",", ".") || 0);
 	}
 
@@ -28,7 +28,7 @@ export class Equipe {
 		for (const equipe of equipes) {
 			if (this.nom !== equipe.nom) {
 				const indiceSimilarite = calculerIndiceSimilarite(this, equipe);
-				if (indiceSimilarite >= 70)
+				if (indiceSimilarite >= 82)
 					this.adversaires.push({ equipe, indiceSimilarite });
 			}
 		}

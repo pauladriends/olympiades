@@ -88,7 +88,8 @@ export function genererFichierExcel(
 		return Object.entries(stats).map(([nom, { nbMatchs, rounds }]) => {
 			const row: Record<string, string | number | null> = {
 				Equipe: nom,
-				NbMatchs: nbMatchs,
+				// NbMatchs: nbMatchs,
+				NbMatchs: "=NBVAL(C2;F2;I2;L2;O2;R2;U2;X2;AA2;AD2)",
 			};
 			for (const roundNum of roundNumbers) {
 				row[`Round${roundNum}`] =
@@ -99,7 +100,7 @@ export function genererFichierExcel(
 					rounds[roundNum] && rounds[roundNum].epreuve
 						? rounds[roundNum].epreuve
 						: null;
-				row[`Resultat${roundNum}`] = "";
+				row[`Resultat${roundNum}`] = null;
 			}
 			return row;
 		});

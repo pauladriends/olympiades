@@ -79,16 +79,19 @@ export enum NomEpreuve {
 	TIR_ARC = "Tir à l'arc",
 	PARCOURS_YEUX_BANDES = "Parcours yeux bandés",
 	COURSE_2 = "Course à 2",
+	BIATHLON = "Biathlon",
+	CURLING = "Curling",
+	LANCER_BOULES_DE_NEIGES = "Lancer de boules de neige",
+	HOCKEY = "Hockey"
 }
 
 export const epreuves = [
 	new Epreuve(NomEpreuve.COURSE_SAC, 2),
-	new Epreuve(NomEpreuve.PARCOURS_COMBATTANT),
-	new Epreuve(NomEpreuve.LANCER_POIDS),
-	new Epreuve(NomEpreuve.BASKET),
+	new Epreuve(NomEpreuve.CURLING),
+	new Epreuve(NomEpreuve.LANCER_BOULES_DE_NEIGES),
+	new Epreuve(NomEpreuve.HOCKEY),
 	new Epreuve(NomEpreuve.TIR_ARC, 2),
-	new Epreuve(NomEpreuve.PARCOURS_YEUX_BANDES),
-	new Epreuve(NomEpreuve.COURSE_2),
+	new Epreuve(NomEpreuve.BIATHLON),
 ];
 
 export function calculerIndiceSimilarite(

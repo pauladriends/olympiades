@@ -61,7 +61,7 @@ async function main() {
 
 	console.log("🏆 Génération des round et du tournoi");
 	let rounds: Round[] = organiserMatchsParRound(matchs, epreuves);
-	rounds = randomiserOrdreRounds(rounds);
+	// rounds = randomiserOrdreRounds(rounds);
 	console.log(`💾 Sauvegarde du tournoi dans ${OLYMPIADE_DB}`);
 	await saveJSON(
 		OLYMPIADE_DB,
